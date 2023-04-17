@@ -19,12 +19,6 @@ public class PageObjectsTest extends TestBase {
         .setGender("Other")
         .setNumber("1234567890")
         .setBirthDate("27","May","1984");
-        //$("#userNumber").setValue("1234567890");
-        //$("#dateOfBirthInput").click();
-       // $(".react-datepicker__year-select").$(byText("1984")).click();
-        //$(".react-datepicker__month-select").$(byText("May")).click();
-       // $(".react-datepicker__day--027").click();
-       // registrationPage.setBirthDate("27","May","1984");
         $("#subjectsContainer").click();
         $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
@@ -38,6 +32,10 @@ public class PageObjectsTest extends TestBase {
         $("#submit").scrollIntoView(false);
         $("#submit").click();
         //Проверям форму Thanks for submitting the form//
+        registrationPage.veryfyModalAppears()
+                .verifyResult("Student Name","Dmitry Ochkasov")
+                .verifyResult("Student Email", "test@mail.ru")
+
         $(".table-responsive").shouldHave(Condition.text("Student Name Dmitry Ochkasov"));
         $(".table-responsive").shouldHave(Condition.text("Student Email test@mail.ru"));
         $(".table-responsive").shouldHave(Condition.text("Gender Other"));

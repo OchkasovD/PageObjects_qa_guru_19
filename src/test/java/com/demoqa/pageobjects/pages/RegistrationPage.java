@@ -1,6 +1,7 @@
 package com.demoqa.pageobjects.pages;
 import com.codeborne.selenide.SelenideElement;
 import com.demoqa.pageobjects.pages.components.CalendarComponent;
+import com.demoqa.pageobjects.pages.components.ResultsModal;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -10,6 +11,7 @@ public class RegistrationPage {
 
     CalendarComponent calendarComponent = new CalendarComponent();
     //SelenideElements / Locator / etc
+    ResultsModal resultsModal = new resultsModal()
     SelenideElement
                 firstnameInput = $("#firstName"),
                 lastnameInput = $("#lastName"),
