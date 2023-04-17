@@ -17,5 +17,5 @@ public class TestBase {
     }
 
     RegistrationPage registrationPage = new RegistrationPage();
-    CalendarComponent calendarComponent = new CalendarComponent();
+
 }
