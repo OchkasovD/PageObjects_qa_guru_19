@@ -20,7 +20,14 @@ public class PageObjectsTest extends TestBase {
         .setGender("Other")
         .setNumber("1234567890")
         .setBirthDate("27","May","1984")
-        .setSubjects("Maths");
+        .setSubjects("Maths")
+        .setHobby("Sports")
+        .uploadPicture("images.png")
+        .setCurrentAddress("Moscow")
+        .setState("Uttar")
+        .setCity("Pradesh Lucknow")
+        .clickSubmit();
+
 
         $("#subjectsContainer").click();
         $("#subjectsInput").setValue("Maths").pressEnter();
