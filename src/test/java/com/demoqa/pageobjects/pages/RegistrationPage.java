@@ -20,7 +20,9 @@ public class RegistrationPage {
                 useremailInput = $("#userEmail"),
                 gender= $("#genterWrapper"),
                 userNumber= $("#userNumber"),
-                dateOfBirthInput = $("#dateOfBirthInput");
+                dateOfBirthInput = $("#dateOfBirthInput"),
+                subjectsInput = $("#subjectsInput");
+
 
     //Actions
     public RegistrationPage openPage() {
@@ -62,6 +64,11 @@ public class RegistrationPage {
     public void setBirthDate(String day, String month, String year){
         dateOfBirthInput.click();
         calendarComponent.setDate(day,month,year);
+    }
+    public RegistrationPage setSubjects(String value) {
+        subjectsInput.setValue(value).pressEnter();
+
+        return this;
     }
     public RegistrationPage verifyRegistrationResultsModalAppears() {
        resultsModal.verifyModalAppears();

@@ -19,7 +19,9 @@ public class PageObjectsTest extends TestBase {
         .setUserEmail("test@mail.ru")
         .setGender("Other")
         .setNumber("1234567890")
-        .setBirthDate("27","May","1984");
+        .setBirthDate("27","May","1984")
+        .setSubjects("Maths");
+
         $("#subjectsContainer").click();
         $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
@@ -45,17 +47,6 @@ public class PageObjectsTest extends TestBase {
                 .verifyResult("Address", "Moscow")
                 .verifyResult("State and City", "Uttar Pradesh Lucknow");
 
-       // $(".table-responsive").shouldHave(Condition.text("Student Name Dmitry Ochkasov"));
-      //  $(".table-responsive").shouldHave(Condition.text("Student Email test@mail.ru"));
-        //$(".table-responsive").shouldHave(Condition.text("Gender Other"));
-        //$(".table-responsive").shouldHave(Condition.text("Mobile 1234567890"));
-       // $(".table-responsive").shouldHave(Condition.text("Date of Birth 27 May,1984"));
-        //$(".table-responsive").shouldHave(Condition.text("Subjects Maths"));
-        //$(".table-responsive").shouldHave(Condition.text("Hobbies Sports"));
-      //  $(".table-responsive").shouldHave(Condition.text("Picture images.png"));
-                    // $(".table-responsive").shouldHave(Condition.text("Address Moscow"));
-       // $(".table-responsive").shouldHave(Condition.text("State and City Uttar Pradesh Lucknow"));
-     //   $("#closeLargeModal").click();
     }
 
 }
