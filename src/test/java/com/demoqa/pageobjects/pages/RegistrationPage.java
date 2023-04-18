@@ -1,8 +1,10 @@
 package com.demoqa.pageobjects.pages;
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import com.demoqa.pageobjects.pages.components.CalendarComponent;
 import com.demoqa.pageobjects.pages.components.ResultsModal;
 
+import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static java.lang.String.format;
@@ -11,7 +13,7 @@ public class RegistrationPage {
 
     CalendarComponent calendarComponent = new CalendarComponent();
     //SelenideElements / Locator / etc
-    ResultsModal resultsModal = new resultsModal()
+    ResultsModal resultsModal = new ResultsModal();
     SelenideElement
                 firstnameInput = $("#firstName"),
                 lastnameInput = $("#lastName"),
@@ -61,5 +63,14 @@ public class RegistrationPage {
         dateOfBirthInput.click();
         calendarComponent.setDate(day,month,year);
     }
+    public RegistrationPage verifyRegistrationResultsModalAppears() {
+       resultsModal.verifyModalAppears();
 
+       return this;
+    }
+        public RegistrationPage verifyResult(String key, String value){
+            resultsModal.verifyResult(key, value);
+
+            return this;
 }
+    }

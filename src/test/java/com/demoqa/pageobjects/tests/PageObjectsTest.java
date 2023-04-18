@@ -8,6 +8,7 @@ import java.io.File;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
+
 public class PageObjectsTest extends TestBase {
 
     @Test
@@ -32,21 +33,29 @@ public class PageObjectsTest extends TestBase {
         $("#submit").scrollIntoView(false);
         $("#submit").click();
         //Проверям форму Thanks for submitting the form//
-        registrationPage.veryfyModalAppears()
+        registrationPage.verifyRegistrationResultsModalAppears()
                 .verifyResult("Student Name","Dmitry Ochkasov")
                 .verifyResult("Student Email", "test@mail.ru")
+                .verifyResult("Gender", "Other")
+                .verifyResult("Mobile", "1234567890")
+                .verifyResult("Date of Birth", "27 May,1984")
+                .verifyResult("Subjects", "Maths")
+                .verifyResult("Hobbies", "Sports")
+                .verifyResult("Picture", "images.png")
+                .verifyResult("Address", "Moscow")
+                .verifyResult("State and City", "Uttar Pradesh Lucknow");
 
-        $(".table-responsive").shouldHave(Condition.text("Student Name Dmitry Ochkasov"));
-        $(".table-responsive").shouldHave(Condition.text("Student Email test@mail.ru"));
-        $(".table-responsive").shouldHave(Condition.text("Gender Other"));
-        $(".table-responsive").shouldHave(Condition.text("Mobile 1234567890"));
-        $(".table-responsive").shouldHave(Condition.text("Date of Birth 27 May,1984"));
-        $(".table-responsive").shouldHave(Condition.text("Subjects Maths"));
-        $(".table-responsive").shouldHave(Condition.text("Hobbies Sports"));
-        $(".table-responsive").shouldHave(Condition.text("Picture images.png"));
-        $(".table-responsive").shouldHave(Condition.text("Address Moscow"));
-        $(".table-responsive").shouldHave(Condition.text("State and City Uttar Pradesh Lucknow"));
-        $("#closeLargeModal").click();
+       // $(".table-responsive").shouldHave(Condition.text("Student Name Dmitry Ochkasov"));
+      //  $(".table-responsive").shouldHave(Condition.text("Student Email test@mail.ru"));
+        //$(".table-responsive").shouldHave(Condition.text("Gender Other"));
+        //$(".table-responsive").shouldHave(Condition.text("Mobile 1234567890"));
+       // $(".table-responsive").shouldHave(Condition.text("Date of Birth 27 May,1984"));
+        //$(".table-responsive").shouldHave(Condition.text("Subjects Maths"));
+        //$(".table-responsive").shouldHave(Condition.text("Hobbies Sports"));
+      //  $(".table-responsive").shouldHave(Condition.text("Picture images.png"));
+                    // $(".table-responsive").shouldHave(Condition.text("Address Moscow"));
+       // $(".table-responsive").shouldHave(Condition.text("State and City Uttar Pradesh Lucknow"));
+     //   $("#closeLargeModal").click();
     }
 
 }
