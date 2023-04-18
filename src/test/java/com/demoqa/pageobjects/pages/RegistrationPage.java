@@ -1,15 +1,10 @@
 package com.demoqa.pageobjects.pages;
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import com.demoqa.pageobjects.pages.components.CalendarComponent;
 import com.demoqa.pageobjects.pages.components.ResultsModal;
-
-import javax.security.auth.Subject;
-
-import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static java.lang.String.format;
+
 
 public class RegistrationPage {
 
@@ -72,16 +67,55 @@ public class RegistrationPage {
     }
 
 
-    public void setBirthDate(String day, String month, String year){
+    public RegistrationPage setBirthDate(String day, String month, String year) {
         dateOfBirthInput.click();
-        calendarComponent.setDate(day,month,year);
+        calendarComponent.setDate(day, month, year);
+
+        return this;
     }
 
-    public RegistrationPage setSubjects (String value) {
+    public RegistrationPage setSubjects(String value) {
         subjectsInput.setValue(value).pressEnter();
 
         return this;
     }
+
+    public RegistrationPage setHobby(String value) {
+        hobbies.$(byText(value)).click();
+
+        return this;
+    }
+
+    public RegistrationPage uploadPicture(String value) {
+        pictureInput.uploadFromClasspath(value);
+
+        return this;
+    }
+
+    public RegistrationPage setCurrentAddress(String value) {
+        currentAddressInput.setValue(value);
+
+        return this;
+    }
+
+    public RegistrationPage setState(String value) {
+        stateInput.click();
+        stateAndCity.$(byText(value)).click();
+
+        return this;
+    }
+
+    public RegistrationPage setCity(String value) {
+        cityInput.click();
+        stateAndCity.$(byText(value)).click();
+
+        return this;
+    }
+
+    public void clickSubmit() {
+        submitButton.click();
+    }
+
 
     public RegistrationPage verifyRegistrationResultsModalAppears() {
        resultsModal.verifyModalAppears();

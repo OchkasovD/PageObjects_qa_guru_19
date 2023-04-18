@@ -1,13 +1,5 @@
 package com.demoqa.pageobjects.tests;
-
-import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
-
-import java.io.File;
-
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-
 
 public class PageObjectsTest extends TestBase {
 
@@ -20,23 +12,13 @@ public class PageObjectsTest extends TestBase {
         .setGender("Other")
         .setNumber("1234567890")
         .setBirthDate("27","May","1984")
-
-
-
-
-
-        //$("#subjectsContainer").click();
-       //("#subjectsInput").setValue("Maths").pressEnter();
-        $("#hobbiesWrapper").$(byText("Sports")).click();
-        $("#uploadPicture").uploadFile(new File("src/test/resources/images.png"));
-        $("#currentAddress").sendKeys("Moscow");
-        $("#submit").scrollIntoView(false);
-        $("#state").click();
-        $("#react-select-3-option-1").click();
-        $("#city").click();
-        $("#react-select-4-option-1").click();
-        $("#submit").scrollIntoView(false);
-        $("#submit").click();
+        .setSubjects("Maths")
+        .setHobby("Sports")
+        .uploadPicture("images.png")
+        .setCurrentAddress("Moscow")
+        .setState("Haryana")
+        .setCity("Panipat")
+        .clickSubmit();
         //Проверям форму Thanks for submitting the form//
         registrationPage.verifyRegistrationResultsModalAppears()
                 .verifyResult("Student Name","Dmitry Ochkasov")
@@ -48,7 +30,7 @@ public class PageObjectsTest extends TestBase {
                 .verifyResult("Hobbies", "Sports")
                 .verifyResult("Picture", "images.png")
                 .verifyResult("Address", "Moscow")
-                .verifyResult("State and City", "Uttar Pradesh Lucknow");
+                .verifyResult("State and City", "Haryana Panipat");
 
     }
 
