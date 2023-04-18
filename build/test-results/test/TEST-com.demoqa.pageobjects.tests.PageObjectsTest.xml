@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.demoqa.pageobjects.tests.PageObjectsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-18T10:29:42" hostname="NB565189" time="7.511">
+<testsuite name="com.demoqa.pageobjects.tests.PageObjectsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-18T12:57:20" hostname="NB565189" time="6.293">
   <properties/>
-  <testcase name="successfulFillFormatTest()" classname="com.demoqa.pageobjects.tests.PageObjectsTest" time="7.511"/>
+  <testcase name="successfulFillFormatTest()" classname="com.demoqa.pageobjects.tests.PageObjectsTest" time="6.293"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
-Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 37696
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 14938
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-апр. 18, 2023 1:29:46 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+апр. 18, 2023 3:57:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 112, so returning the closest version found: 110
 ]]></system-err>
 </testsuite>

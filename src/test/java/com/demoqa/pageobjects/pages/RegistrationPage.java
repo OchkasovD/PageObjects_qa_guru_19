@@ -4,6 +4,8 @@ import com.codeborne.selenide.SelenideElement;
 import com.demoqa.pageobjects.pages.components.CalendarComponent;
 import com.demoqa.pageobjects.pages.components.ResultsModal;
 
+import javax.security.auth.Subject;
+
 import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -69,9 +71,16 @@ public class RegistrationPage {
 
     }
 
+
     public void setBirthDate(String day, String month, String year){
         dateOfBirthInput.click();
         calendarComponent.setDate(day,month,year);
+    }
+
+    public RegistrationPage setSubjects (String value) {
+        subjectsInput.setValue(value).pressEnter();
+
+        return this;
     }
 
     public RegistrationPage verifyRegistrationResultsModalAppears() {
