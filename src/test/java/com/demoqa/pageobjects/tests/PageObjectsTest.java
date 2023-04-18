@@ -19,18 +19,12 @@ public class PageObjectsTest extends TestBase {
         .setUserEmail("test@mail.ru")
         .setGender("Other")
         .setNumber("1234567890")
-        .setBirthDate("27","May","1984")
-        .setSubjects("Maths")
-        .setHobby("Sports")
-        .uploadPicture("images.png")
-        .setCurrentAddress("Moscow")
-        .setState("Uttar")
-        .setCity("Pradesh Lucknow")
-        .clickSubmit();
+        .setBirthDate("27","May","1984");
+
 
 
         $("#subjectsContainer").click();
-        $("#subjectsInput").setValue("Maths").pressEnter();
+       //("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#uploadPicture").uploadFile(new File("src/test/resources/images.png"));
         $("#currentAddress").sendKeys("Moscow");

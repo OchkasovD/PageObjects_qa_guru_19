@@ -21,7 +21,14 @@ public class RegistrationPage {
                 gender= $("#genterWrapper"),
                 userNumber= $("#userNumber"),
                 dateOfBirthInput = $("#dateOfBirthInput"),
-                subjectsInput = $("#subjectsInput");
+                subjectsInput = $("#subjectsInput"),
+                hobbies = $("#hobbiesWrapper"),
+                pictureInput = $("#uploadPicture"),
+                currentAddressInput = $("#currentAddress"),
+                stateInput = $("#state"),
+                cityInput = $("#city"),
+                stateAndCity = $("#stateCity-wrapper"),
+                submitButton = $("#submit");
 
 
     //Actions
@@ -59,17 +66,14 @@ public class RegistrationPage {
         userNumber.setValue(value);
 
         return this;
+
     }
 
     public void setBirthDate(String day, String month, String year){
         dateOfBirthInput.click();
         calendarComponent.setDate(day,month,year);
     }
-    public RegistrationPage setSubjects(String value) {
-        subjectsInput.setValue(value).pressEnter();
 
-        return this;
-    }
     public RegistrationPage verifyRegistrationResultsModalAppears() {
        resultsModal.verifyModalAppears();
 
