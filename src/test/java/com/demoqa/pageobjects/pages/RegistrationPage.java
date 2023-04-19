@@ -12,30 +12,38 @@ public class RegistrationPage {
     //SelenideElements / Locator / etc
     ResultsModal resultsModal = new ResultsModal();
     SelenideElement
-                firstnameInput = $("#firstName"),
-                lastnameInput = $("#lastName"),
-                useremailInput = $("#userEmail"),
-                gender= $("#genterWrapper"),
-                userNumber= $("#userNumber"),
-                dateOfBirthInput = $("#dateOfBirthInput"),
-                subjectsInput = $("#subjectsInput"),
-                hobbies = $("#hobbiesWrapper"),
-                pictureInput = $("#uploadPicture"),
-                currentAddressInput = $("#currentAddress"),
-                stateInput = $("#state"),
-                cityInput = $("#city"),
-                stateAndCity = $("#stateCity-wrapper"),
-                submitButton = $("#submit");
+            firstnameInput = $("#firstName"),
+            lastnameInput = $("#lastName"),
+            useremailInput = $("#userEmail"),
+            gender = $("#genterWrapper"),
+            userNumber = $("#userNumber"),
+            dateOfBirthInput = $("#dateOfBirthInput"),
+            subjectsInput = $("#subjectsInput"),
+            hobbies = $("#hobbiesWrapper"),
+            pictureInput = $("#uploadPicture"),
+            currentAddressInput = $("#currentAddress"),
+            stateInput = $("#state"),
+            cityInput = $("#city"),
+            stateAndCity = $("#stateCity-wrapper"),
+            submitButton = $("#submit");
 
 
     //Actions
     public RegistrationPage openPage() {
         open("/automation-practice-form");
-        executeJavaScript("$('footer').remove()");
-        executeJavaScript("$('#fixedban').remove()");
 
         return this;
-    }public RegistrationPage setFirstName(String value) {
+
+    }
+
+    public RegistrationPage removeBanners() {
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
+
+        return this;
+    }
+
+    public RegistrationPage setFirstName(String value) {
         firstnameInput.setValue(value);
 
         return this;
@@ -53,8 +61,9 @@ public class RegistrationPage {
 
         return this;
     }
+
     public RegistrationPage setGender(String value) {
-        gender.$(byText("Other")).click();
+        gender.$(byText(value)).click();
 
         return this;
     }
@@ -118,13 +127,14 @@ public class RegistrationPage {
 
 
     public RegistrationPage verifyRegistrationResultsModalAppears() {
-       resultsModal.verifyModalAppears();
+        resultsModal.verifyModalAppears();
 
-       return this;
+        return this;
     }
-        public RegistrationPage verifyResult(String key, String value){
-            resultsModal.verifyResult(key, value);
 
-            return this;
+    public RegistrationPage verifyResult(String key, String value) {
+        resultsModal.verifyResult(key, value);
+
+        return this;
+    }
 }
-    }

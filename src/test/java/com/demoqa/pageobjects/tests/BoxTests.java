@@ -1,6 +1,11 @@
 package com.demoqa.pageobjects.tests;
+import com.demoqa.pageobjects.pages.TextBoxPage;
 import org.junit.jupiter.api.Test;
+
+
 public class BoxTests extends TestBase {
+    TextBoxPage textBoxPage = new TextBoxPage();
+
     @Test
     void successfulFillFormTest() {
         textBoxPage.openPage()
