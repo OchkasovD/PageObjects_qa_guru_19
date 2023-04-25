@@ -20,12 +20,12 @@ public class PageObjectsGenerateDataTest extends TestBase {
                 .setGender(userGender)
                 .setNumber(phoneNumber)
                 .setBirthDate(dayValue, monthsValue, yearValue)
-                .setSubjects("Maths")
-                .setHobby("Sports")
-                .uploadPicture("images.png")
-                .setCurrentAddress("Moscow")
-                .setState("Haryana")
-                .setCity("Panipat")
+                .setSubjects(subjectValue)
+                .setHobby(hobbiesValue)
+                .uploadPicture(uploadPicture)
+                .setCurrentAddress(currentAddress)
+                .setState(stateValue)
+                .setCity(cityValue)
                 .clickSubmit();
         //Проверям форму Thanks for submitting the form//
         registrationPage.verifyRegistrationResultsModalAppears()

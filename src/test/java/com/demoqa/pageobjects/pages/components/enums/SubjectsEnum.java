@@ -1,6 +1,6 @@
 package com.demoqa.pageobjects.pages.components.enums;
 
-ublic enum SubjectsEnum {
+public  enum SubjectsEnum {
     Manths ("Maths"),
     Accounting ("Accounting"),
     Arts ("Arts"),

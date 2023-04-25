@@ -14,14 +14,13 @@ public class RegistrationPageData {
             phoneNumber = RandomPhone(),
             dayValue = RandomDay(),
             monthsValue = RandomMonth(),
-            yearValue = RandomYear();
-
-         //    subjectValue = getRandomSubjects(),
-         //    hobbiesValue = getRandomHobbies(),
-         //    uploadPicture = "image.png",
-         //     currentAddress = faker.address().fullAddress(),
-         //     stateValue = getRandomState(),
-    //       cityValue = getRandomCity(stateValue);
+            yearValue = RandomYear(),
+            subjectValue = RandomSubjects(),
+            hobbiesValue = RandomHobbies(),
+            uploadPicture = "images.png",
+            currentAddress = RandomAddress(),
+            stateValue = RandomState(),
+            cityValue = RandomCity(stateValue);
 
 
 }
