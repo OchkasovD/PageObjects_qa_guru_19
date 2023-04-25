@@ -16,7 +16,6 @@ public class RegistrationPageData {
             monthsValue = RandomMonth(),
             yearValue = RandomYear();
 
-         //   phoneNumber = ("89" + getRandomInt(11111111,99999999)),
          //    subjectValue = getRandomSubjects(),
          //    hobbiesValue = getRandomHobbies(),
          //    uploadPicture = "image.png",
