@@ -1,9 +1,5 @@
 package com.demoqa.pageobjects.testData;
-
-
-import java.util.Locale;
 import static  com.demoqa.pageobjects.utils.RandomUtils.*;
-
 
 public class RegistrationPageData {
 
@@ -21,6 +17,5 @@ public class RegistrationPageData {
             currentAddress = RandomAddress(),
             stateValue = RandomState(),
             cityValue = RandomCity(stateValue);
-
 
 }

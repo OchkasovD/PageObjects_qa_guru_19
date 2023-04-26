@@ -1,13 +1,13 @@
 package com.demoqa.pageobjects.tests;
-import com.demoqa.pageobjects.testData.RegistrationPageData;
 import org.junit.jupiter.api.Test;
 import com.demoqa.pageobjects.pages.RegistrationPage;
 import static com.demoqa.pageobjects.testData.RegistrationPageData.*;
+import static com.demoqa.pageobjects.testData.RegistrationFormFieldsView.*;
 
 
 public class PageObjectsGenerateDataTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
-    RegistrationPageData registrationPageData = new RegistrationPageData();
+
 
     @Test
     void successfulFillFormatTest() {
@@ -29,16 +29,16 @@ public class PageObjectsGenerateDataTest extends TestBase {
                 .clickSubmit();
         //Проверям форму Thanks for submitting the form//
         registrationPage.verifyRegistrationResultsModalAppears()
-                .verifyResult("Student Name", "Dmitry Ochkasov")
-                .verifyResult("Student Email", "test@mail.ru")
-                .verifyResult("Gender", "Other")
-                .verifyResult("Mobile", "1234567890")
-                .verifyResult("Date of Birth", "27 May,1984")
-                .verifyResult("Subjects", "Maths")
-                .verifyResult("Hobbies", "Sports")
-                .verifyResult("Picture", "images.png")
-                .verifyResult("Address", "Moscow")
-                .verifyResult("State and City", "Haryana Panipat");
+                .verifyResult(studentNameField, (firstName+" "+lastName))
+                .verifyResult(studentEmailField, userEmail)
+                .verifyResult(genderField, userGender)
+                .verifyResult(mobileField, phoneNumber)
+                .verifyResult(dateBirthField, dayValue+ " " + monthsValue + "," + yearValue)
+                .verifyResult(subjectsField, subjectValue)
+                .verifyResult(hobbiesField, hobbiesValue)
+                .verifyResult(pictureField, uploadPicture)
+                .verifyResult(addressField, currentAddress)
+                .verifyResult(stateCityField, (stateValue + " " + cityValue));
 
     }
 
