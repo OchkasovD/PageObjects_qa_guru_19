@@ -5,7 +5,7 @@ import static com.demoqa.pageobjects.testData.RegistrationPageData.*;
 import static com.demoqa.pageobjects.testData.RegistrationFormFieldsView.*;
 
 
-public class PageObjectsGenerateDataTest extends TestBase {
+public class PageObjectsGenDataTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
 
