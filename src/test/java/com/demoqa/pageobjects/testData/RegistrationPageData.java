@@ -3,19 +3,19 @@ import static  com.demoqa.pageobjects.utils.RandomUtils.*;
 
 public class RegistrationPageData {
 
-    public static String firstName = RandomFirstName(),
-            lastName = RandomLastName(),
-            userEmail = RandomEmail(),
-            userGender = RandomGender(),
-            phoneNumber = RandomPhone(),
-            dayValue = RandomDay(),
-            monthsValue = RandomMonth(),
-            yearValue = RandomYear(),
-            subjectValue = RandomSubjects(),
-            hobbiesValue = RandomHobbies(),
+    public static String firstName = getRandomFirstName(),
+            lastName = getRandomLastName(),
+            userEmail = getRandomEmail(),
+            userGender = getRandomGender(),
+            phoneNumber = getRandomPhone(),
+            dayValue = getRandomDay(),
+            monthsValue = getRandomMonth(),
+            yearValue = getRandomYear(),
+            subjectValue = getRandomSubjects(),
+            hobbiesValue = getRandomHobbies(),
             uploadPicture = "images.png",
-            currentAddress = RandomAddress(),
-            stateValue = RandomState(),
-            cityValue = RandomCity(stateValue);
+            currentAddress = getRandomAddress(),
+            stateValue = getRandomState(),
+            cityValue = getRandomCity(stateValue);
 
 }
