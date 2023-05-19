@@ -7,10 +7,9 @@ import static com.demoqa.pageobjects.testData.TextBoxPageData.*;
 import static io.qameta.allure.Allure.step;
 
 
-public class BoxTestsGenDataTest extends RemoteTestBase {
+public class BoxTestsGenDataTest extends TestBase {
     TextBoxPage textBoxPage = new TextBoxPage();
     @Test
-    @Tag("remote")
     @DisplayName("Успешное заполнение формы")
     void successfulFillFormTest() {
         step("Заполнить форму", () -> {

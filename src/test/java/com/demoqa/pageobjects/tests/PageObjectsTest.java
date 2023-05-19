@@ -6,11 +6,10 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-public class PageObjectsTest extends RemoteTestBase {
+public class PageObjectsTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
-    @Tag("remote")
     @DisplayName("Успешное заполнение формы")
     void successfulFillFormatTest() {
         step("Открыть форму", () -> {
