@@ -7,7 +7,7 @@ import static com.demoqa.pageobjects.testData.TextBoxPageData.*;
 import static io.qameta.allure.Allure.step;
 
 
-public class BoxTestsGenDataTest extends TestBase {
+public class BoxTestsGenDataTest extends RemoteTestBase {
     TextBoxPage textBoxPage = new TextBoxPage();
     @Test
     @Tag("remote")

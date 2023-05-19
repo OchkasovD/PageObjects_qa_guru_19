@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-public class PageObjectsTest extends TestBase {
+public class PageObjectsTest extends RemoteTestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
