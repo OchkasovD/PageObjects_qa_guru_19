@@ -1,14 +1,19 @@
 package com.demoqa.pageobjects.tests;
 import com.demoqa.pageobjects.pages.RegistrationPage;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+
+import static io.qameta.allure.Allure.step;
 
 public class PageObjectsTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
     @Tag("remote")
+    @DisplayName("Успешное заполнение формы")
     void successfulFillFormatTest() {
+        step("Открыть форму", () -> {
         registrationPage.openPage()
                 .removeBanners()
                 .setFirstName("Dmitry")
@@ -24,6 +29,8 @@ public class PageObjectsTest extends TestBase {
                 .setState("Haryana")
                 .setCity("Panipat")
                 .clickSubmit();
+        });
+        step("Проверить результат", () -> {
         //Проверям форму Thanks for submitting the form//
         registrationPage.verifyRegistrationResultsModalAppears()
                 .verifyResult("Student Name", "Dmitry Ochkasov")
@@ -36,6 +43,7 @@ public class PageObjectsTest extends TestBase {
                 .verifyResult("Picture", "images.png")
                 .verifyResult("Address", "Moscow")
                 .verifyResult("State and City", "Haryana Panipat");
+        });
 
     }
 
