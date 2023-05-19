@@ -1,11 +1,13 @@
 package com.demoqa.pageobjects.tests;
 import com.demoqa.pageobjects.pages.RegistrationPage;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class PageObjectsTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
+    @Tag("remote")
     void successfulFillFormatTest() {
         registrationPage.openPage()
                 .removeBanners()
