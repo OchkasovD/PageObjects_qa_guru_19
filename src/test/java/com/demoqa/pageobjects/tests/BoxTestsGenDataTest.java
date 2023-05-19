@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static com.demoqa.pageobjects.testData.TextBoxPageData.*;
 
 
-public class BoxTestsGenDataTest extends TestBase {
+public class BoxTestsGenDataTest extends RemoteTestBase {
     TextBoxPage textBoxPage = new TextBoxPage();
     @Test
     void successfulFillFormTest() {
