@@ -11,7 +11,6 @@ public class BoxTests extends RemoteTestBase {
     TextBoxPage textBoxPage = new TextBoxPage();
 
     @Test
-    @Tag("remote")
     @DisplayName("Успешное заполнение формы")
     void successfulFillFormTest() {
         step("Заполнить форму", () -> {
