@@ -8,7 +8,7 @@ import static com.demoqa.pageobjects.testData.RegistrationFormFieldsView.*;
 import static io.qameta.allure.Allure.step;
 
 
-public class PageObjectsGenDataTest extends RemoteTestBase {
+public class PageObjectsGenDataTest extends ParamTestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
 
