@@ -13,7 +13,7 @@ public class PageObjectsGenDataTest extends RemoteTestBase {
 
 
     @Test
-    @Tag("remote")
+    @Tag("smoke")
     @DisplayName("Успешное заполнение формы")
     void successfulFillFormatTest() {
         step("Открыть форму", () -> {
