@@ -10,7 +10,7 @@ import static io.qameta.allure.Allure.step;
 public class BoxTestsGenDataTest extends ParamTestBase {
     TextBoxPage textBoxPage = new TextBoxPage();
     @Test
-    @Tag("remote")
+    @Tag("smoke")
     @DisplayName("Успешное заполнение формы")
     void successfulFillFormTest() {
         step("Заполнить форму", () -> {
