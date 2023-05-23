@@ -14,7 +14,6 @@ public class ParamTestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
-        String[] browserAndVersion = System.getProperty("browser", "chrome:100.0").split(":");
         String[] browserAndVersion = System.getProperty("browser", "opera:84.0").split(":");
         Configuration.browser = browserAndVersion[0];
         Configuration.browserVersion = browserAndVersion[1];
